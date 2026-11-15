@@ -1,0 +1,33 @@
+# .herdr-kanban.toml — shared multi-agent Kanban configuration.
+
+[board]
+project_owner = "jellespijker"
+project_number = 8
+target_branch = "main"
+remote = "origin"
+lease_ttl_minutes = 30
+require_review = false
+auto_ready_deposits = false
+close_issue_on_done = true
+
+[columns]
+triage = "Triage"
+ready = "Ready"
+in_progress = "In Progress"
+blocked = "Blocked"
+review = "Review"
+done = "Done"
+
+[repos.omabook]
+owner = "jellespijker"
+repo = "omabook"
+path = "omabook"
+# Builds with limited parallelism (bin/build), then every test suite.
+check_command = "bin/build && QT_QPA_PLATFORM=offscreen ctest --test-dir build --output-on-failure"
+
+[repos.storyteller]
+owner = "jellespijker"
+repo = "omabook-storyteller"
+path = "omabook-storyteller"
+# The story pipeline and skills with the stand-in model; needs omabook on PATH.
+check_command = "python3 tests/run.py && python3 tests/evals.py"

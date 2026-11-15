@@ -1,0 +1,5 @@
+# The project repositories are cloned here by `herdr-kanban sync-repos`;
+# each keeps its own history.
+/omabook/
+/omabook-storyteller/
+/.worktrees/
