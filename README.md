@@ -27,8 +27,9 @@ provisions them. Milestones are release versions: Omabook `0.1.6`, `0.1.7`; Stor
 
 ## Packaging
 
-`omabook-packaging/` is a symlink to `../omabook-packaging`, the PKGBUILD drafts for
-Omarchy and the AUR. It is not a Git repository and is not on the board.
+`omabook-packaging/` is a symlink to `../omabook-packaging`, the PKGBUILD recipes for
+Omarchy and the AUR, in a Git repository of its own (local, not on GitHub) and not on the board.
+Its README lists what to update on each Omabook release.
 
 ## Building
 

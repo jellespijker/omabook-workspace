@@ -7,7 +7,7 @@ a separate clone of `omabook` or `omabook-storyteller`.
 |---|---|---|
 | `omabook/` | [jellespijker/omabook](https://github.com/jellespijker/omabook), the app | `omabook` |
 | `omabook-storyteller/` | [jellespijker/omabook-storyteller](https://github.com/jellespijker/omabook-storyteller), the Storyteller plugin | `storyteller` |
-| `omabook-packaging/` | symlink to `../omabook-packaging`: PKGBUILD drafts; not a git repo, not on the board | — |
+| `omabook-packaging/` | symlink to `../omabook-packaging`: the PKGBUILD recipes, a local git repo of its own; not on the board | — |
 
 Each repository keeps its own history, issues and milestones. This repository holds only the
 shared board configuration (`.herdr-kanban.toml`) and these notes. `herdr-kanban sync-repos`
