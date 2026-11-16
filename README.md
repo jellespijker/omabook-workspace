@@ -1,6 +1,6 @@
 # Omabook workspace
 
-The planning workspace for [Omabook](https://github.com/jellespijker/omabook),
+The main workspace for developing Omabook and its plugins, and the planning workspace for [Omabook](https://github.com/jellespijker/omabook),
 the ebook library and reader for Omarchy, and its
 [Storyteller plugin](https://github.com/jellespijker/omabook-storyteller).
 It holds the shared Kanban board configuration (`.herdr-kanban.toml`) for both
@@ -17,6 +17,18 @@ herdr-kanban board          # the board: Triage, Ready, In Progress, Review, Don
 Tickets are named by repository: `omabook#12`, `storyteller#3`. A ticket is
 worked on in its own worktree, which can read the other repository under
 `.siblings/`. A ticket lands on `main` only after that repository's tests pass.
+
+## Labels and milestones
+
+Every ticket carries one `type:*` and at least one `domain:*` label and a project `Priority`
+(`P0`–`P3`); the facets live in `.herdr-kanban.toml` and `herdr-kanban sync-labels --cwd <repo>`
+provisions them. Milestones are release versions: Omabook `0.1.6`, `0.1.7`; Storyteller
+`1.3`, `1.4`. Agents: see [AGENTS.md](AGENTS.md).
+
+## Packaging
+
+`omabook-packaging/` is a symlink to `../omabook-packaging`, the PKGBUILD drafts for
+Omarchy and the AUR. It is not a Git repository and is not on the board.
 
 ## Building
 

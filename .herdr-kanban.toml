@@ -9,6 +9,9 @@ lease_ttl_minutes = 30
 require_review = false
 auto_ready_deposits = false
 close_issue_on_done = true
+priority_field = "Priority"
+priorities = ["P0", "P1", "P2", "P3"]
+require_priority_for_ready = true
 
 [columns]
 triage = "Triage"
@@ -17,6 +20,25 @@ in_progress = "In Progress"
 blocked = "Blocked"
 review = "Review"
 done = "Done"
+
+# Label taxonomy, provisioned in every repository by `herdr-kanban sync-labels`.
+# Same facet design as the unimotion board; domain and type are required to be Ready.
+
+[taxonomy.facets.domain]
+prefix = "domain:"
+values = ["library", "reader", "metadata", "sync-share", "ai-mcp", "plugins", "packaging-release", "telemetry", "accessibility", "dx"]
+required_for_ready = true
+multiple = true
+color = "1d76db"
+description = "Area of Omabook (library, reader, metadata, sync, AI, plugins, release, telemetry, a11y, dx)"
+
+[taxonomy.facets.type]
+prefix = "type:"
+values = ["feature", "bug", "doc", "chore", "spike"]
+required_for_ready = true
+multiple = false
+color = "0e8a16"
+description = "Ticket classification (feature, bug, doc, chore, spike)"
 
 [repos.omabook]
 owner = "jellespijker"
