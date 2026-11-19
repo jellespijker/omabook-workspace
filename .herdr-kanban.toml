@@ -55,3 +55,10 @@ repo = "omabook-storyteller"
 path = "omabook-storyteller"
 # The story pipeline and skills with the stand-in model; needs omabook on PATH.
 check_command = "python3 tests/run.py && python3 tests/evals.py"
+
+[repos.notebooks]
+owner = "jellespijker"
+repo = "omabook-notebooks"
+path = "omabook-notebooks"
+# The notebook plugin's own tests, once it has code; needs omabook on PATH.
+check_command = "test ! -f tests/run.py || python3 tests/run.py"

@@ -1,12 +1,13 @@
 # AGENTS.md — Omabook workspace
 
 This workspace is the main place to develop Omabook and its plugins. Work here, not in
-a separate clone of `omabook` or `omabook-storyteller`.
+a separate clone of `omabook`, `omabook-storyteller` or `omabook-notebooks`.
 
 | Path | Repository | Board alias |
 |---|---|---|
 | `omabook/` | [jellespijker/omabook](https://github.com/jellespijker/omabook), the app | `omabook` |
 | `omabook-storyteller/` | [jellespijker/omabook-storyteller](https://github.com/jellespijker/omabook-storyteller), the Storyteller plugin | `storyteller` |
+| `omabook-notebooks/` | [jellespijker/omabook-notebooks](https://github.com/jellespijker/omabook-notebooks), the notebook plugin | `notebooks` |
 | `omabook-packaging/` | symlink to `../omabook-packaging`: the PKGBUILD recipes, a local git repo of its own; not on the board | — |
 
 Each repository keeps its own history, issues and milestones. This repository holds only the

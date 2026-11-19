@@ -2,5 +2,6 @@
 # each keeps its own history.
 /omabook/
 /omabook-storyteller/
+/omabook-notebooks/
 /.worktrees/
 /omabook-packaging

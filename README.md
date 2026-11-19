@@ -2,7 +2,8 @@
 
 The main workspace for developing Omabook and its plugins, and the planning workspace for [Omabook](https://github.com/jellespijker/omabook),
 the ebook library and reader for Omarchy, and its
-[Storyteller plugin](https://github.com/jellespijker/omabook-storyteller).
+[Storyteller plugin](https://github.com/jellespijker/omabook-storyteller) and the
+[notebook plugin](https://github.com/jellespijker/omabook-notebooks).
 It holds the shared Kanban board configuration (`.herdr-kanban.toml`) for both
 repositories; the code lives in each repository.
 
@@ -10,7 +11,7 @@ repositories; the code lives in each repository.
 
 ```bash
 gh repo clone jellespijker/omabook-workspace && cd omabook-workspace
-herdr-kanban sync-repos     # clones omabook and omabook-storyteller here
+herdr-kanban sync-repos     # clones omabook, omabook-storyteller and omabook-notebooks here
 herdr-kanban board          # the board: Triage, Ready, In Progress, Review, Done
 ```
 
