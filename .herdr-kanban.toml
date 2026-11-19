@@ -44,8 +44,10 @@ description = "Ticket classification (feature, bug, doc, chore, spike)"
 owner = "jellespijker"
 repo = "omabook"
 path = "omabook"
-# Builds with limited parallelism (bin/build), then every test suite.
-check_command = "bin/build && QT_QPA_PLATFORM=offscreen ctest --test-dir build --output-on-failure"
+# Builds, then every test suite: on a roomier build machine through a local
+# `omabook-remote` when one is set up and reachable, else here with limited
+# parallelism (bin/build).
+check_command = "if command -v omabook-remote >/dev/null && omabook-remote --host >/dev/null; then omabook-remote bin/test -j3; else bin/build && QT_QPA_PLATFORM=offscreen ctest --test-dir build --output-on-failure; fi"
 
 [repos.storyteller]
 owner = "jellespijker"
