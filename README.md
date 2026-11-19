@@ -4,7 +4,7 @@ The main workspace for developing Omabook and its plugins, and the planning work
 the ebook library and reader for Omarchy, and its
 [Storyteller plugin](https://github.com/jellespijker/omabook-storyteller) and the
 [notebook plugin](https://github.com/jellespijker/omabook-notebooks).
-It holds the shared Kanban board configuration (`.herdr-kanban.toml`) for both
+It holds the shared Kanban board configuration (`.herdr-kanban.toml`) for all three
 repositories; the code lives in each repository.
 
 ## Set up
